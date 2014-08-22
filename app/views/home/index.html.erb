@@ -1,0 +1,77 @@
+<h1 class="large-3 columns large-centered">Sudoku Solver</h1>
+
+<br><br>
+<h3 class="large-1 columns large-centered">Skeleton</h3>
+<br><br>
+
+<div class="large-9 columns large-centered">
+  <% 9.times do |i| %>
+    <% 3.times do |j| %>
+      <% 3.times do |k| %>
+        <div class="large-1 columns"><%= (i*9)+(j*3+k) %></div>
+      <% end %>
+      <% if j != 2 %>
+        <div class="large-1 columns">|</div>
+      <% end %>
+    <% end %>
+    <br><br>
+    <% if (i+1)%3 == 0 && (i+1)/3 != 3 %>
+      <% 11.times do |i| %>
+        <div class="large-1 columns">__</div>
+      <% end %>
+      <br><br>
+    <% end %>
+  <% end %>
+</div>
+
+<br><br>
+<h3 class="large-1 columns large-centered">Input</h3>
+<br><br>
+
+<div class="large-9 columns large-centered">
+  <% 9.times do |i| %>
+    <% 3.times do |j| %>
+      <% 3.times do |k| %>
+        <div class="large-1 columns"><%= @puzzle[(i*9)+(j*3+k)] == 0 ? '-' : @puzzle[(i*9)+(j*3+k)] %></div>
+      <% end %>
+      <% if j != 2 %>
+        <div class="large-1 columns">|</div>
+      <% end %>
+    <% end %>
+    <br><br>
+    <% if (i+1)%3 == 0 && (i+1)/3 != 3 %>
+      <% 11.times do |i| %>
+        <div class="large-1 columns">__</div>
+      <% end %>
+      <br><br>
+    <% end %>
+  <% end %>
+</div>
+
+<br><br>
+<h3 class="large-1 columns large-centered">Output</h3>
+<br><br>
+
+<div class="large-9 columns large-centered">
+  <% 9.times do |i| %>
+    <% 3.times do |j| %>
+      <% 3.times do |k| %>
+        <div class="large-1 columns"><%= @result[(i*9)+(j*3+k)] == 0 ? '-' : @result[(i*9)+(j*3+k)] %></div>
+      <% end %>
+      <% if j != 2 %>
+        <div class="large-1 columns">|</div>
+      <% end %>
+    <% end %>
+    <br><br>
+    <% if (i+1)%3 == 0 && (i+1)/3 != 3 %>
+      <% 11.times do |i| %>
+        <div class="large-1 columns">__</div>
+      <% end %>
+      <br><br>
+    <% end %>
+  <% end %>
+</div>
+
+<br><br>
+<h3 class="large-2 columns large-centered">The End</h3>
+<br><br>
